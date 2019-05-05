@@ -25,13 +25,28 @@ The rules:
 
 ## The workflow
 
-* Every *project* or a *module* or *whatever* should start with a **request.md**
-* If Dev team accept the request should produce a detailed **specs.md** and (at least) basic **readme.md**
-* Github project workflow manages the variuos tasks
-* Tasks should take in account for: supply chain optimization (OPL), estimate cost and time, reveal flaws, solve design issue, get feedbacks
-* OSHW Lab will do manufacture/assembly and the required hardware test then send feedbacks to the Dev team
-* **readme.md** should be filled with required details
-* OSHW Lab will eventually do report hardware test in **/test** directory
+* Every repo (*project* or a *module* or *whatever*) should start with a **REQUEST.md** template (look in /template section)
+* Do all this first steps:
+  1. copy/paste **REQUEST.md** as **SPECS.md**
+  2. copy/paste a basic **README.md** template (look in /template section)
+  3. create a new Project called **"SPEC"** with template *Automated KanBan*
+  4. create an *issue* called **"SPEC"** and:
+    1. assign it to Dev team
+    2. assign to Project as the repository
+    3. set/create a Milestone with name *review*
+  
+* **SPEC** issues are the first workflow that should lead the next tasks, but it's not mandatory:
+  * any member can update the **SPECS.md** directly
+  * (preferred) Dev team update the **SPECS.md** via *issue* using Project **SPEC**, so team can view/collaborate/improve the specific task 
+* The **SPEC** tasks should take care for:
+  * analyze what is not has been specified in the **REQUEST.md**
+  * working on the **SPECS.md** should: reveal flaws, solve preliminary design issue, get feedbacks from Dev team
+
+* The **SPEC** stage is non-blocking, you can start (in some other branch) preliminary design process
+* As **SPEC** issues are completed, **SPEC.md** updated and locked, the next stage should be the design process
+* No strict rules for the design process workflow, just be collaborative and ask for feedbacks
+* As design process is completed OSHW will do manufacture/assembly and hardware tests then send feedbacks to the Dev team
+* **README.md** at this stage should be completed
 
 
 ## How to join
